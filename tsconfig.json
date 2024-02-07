@@ -18,12 +18,14 @@
         "allowJs": true,
         "baseUrl": ".",
         "paths": {
+            "@app": ["./src/app"],
             "@public/*": ["./public/*"],
             "@components/*": ["./src/components/*"],
             "@constants/*": ["./src/constants/*"],
             "@hooks/*": ["./src/hooks/*"],
-            "@pages/*": ["./src/pages/*"],
+            "@pages": ["./src/pages"],
             "@redux/*": ["./src/redux/*"],
+            "@styles/*": ["./src/styles/*"],
             "@types/*": ["./src/types/*"],
             "@utils/*": ["./src/utils/*"]
         },

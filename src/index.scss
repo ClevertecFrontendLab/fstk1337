@@ -1,0 +1,92 @@
+@import '@styles/fonts';
+@import 'antd/dist/antd.css';
+
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    line-height: 130%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+button {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.container {
+    display: block;
+    max-width: 1470px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.ant-layout {
+    min-height: 100vh;
+}
+
+.ant-layout-sider {
+    background-color: #fff;
+}
+  
+.ant-layout-header {
+    min-height: 168px;
+    background: #f0f5ff;
+}
+
+.site-layout-content {
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fffdfd 100%);
+}
