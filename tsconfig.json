@@ -20,9 +20,10 @@
         "paths": {
             "@app": ["./src/app"],
             "@public/*": ["./public/*"],
-            "@components/*": ["./src/components/*"],
+            "@components": ["./src/components"],
             "@constants/*": ["./src/constants/*"],
             "@hooks/*": ["./src/hooks/*"],
+            "@icons/*": ["./src/assets/icons/*"],
             "@images/*": ["./src/assets/images/*"],
             "@pages": ["./src/pages"],
             "@redux/*": ["./src/redux/*"],

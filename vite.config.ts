@@ -1,10 +1,14 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
+
 import path from 'path';
 
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), svgr({
+        include: "**/*.svg"
+    })],
     server: {
         host: true,
         port: 3000,
@@ -16,6 +20,7 @@ export default defineConfig({
             '@components': path.resolve(__dirname, 'src/components'),
             '@constants': path.resolve(__dirname, 'src/constants'),
             '@hooks': path.resolve(__dirname, 'src/hooks'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons'),
             '@images': path.resolve(__dirname, 'src/assets/images'),
             '@pages': path.resolve(__dirname, 'src/pages'),
             '@redux': path.resolve(__dirname, 'src/redux'),
