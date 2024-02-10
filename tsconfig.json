@@ -23,6 +23,7 @@
             "@components/*": ["./src/components/*"],
             "@constants/*": ["./src/constants/*"],
             "@hooks/*": ["./src/hooks/*"],
+            "@images/*": ["./src/assets/images/*"],
             "@pages": ["./src/pages"],
             "@redux/*": ["./src/redux/*"],
             "@styles/*": ["./src/styles/*"],

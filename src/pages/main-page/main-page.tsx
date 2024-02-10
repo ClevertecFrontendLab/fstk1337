@@ -10,9 +10,13 @@ export const MainPage: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
 
     return (
-        <div className="container">
+        <div className="container main-container">
             <Layout>
-                <Sider trigger={null} collapsible collapsed={collapsed}>
+                <Sider
+                    trigger={null}
+                    collapsible
+                    collapsed={collapsed}
+                >
                     Cleverfit
                     {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                         className: 'trigger',
