@@ -96,12 +96,17 @@ button {
 }
   
 .ant-layout-header {
-    min-height: 168px;
+    height: auto;
+    line-height: 130%;
     background: #f0f5ff;
-    padding: 0;
+    padding: 16px 24px;
 }
 
 .ant-layout-footer {
     padding: 0;
     background: none;
+}
+
+h1.ant-typography {
+    margin-bottom: 0;
 }

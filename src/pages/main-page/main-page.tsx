@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Layout } from 'antd';
-import { MainSider } from '@components';
+import { MainHeader, MainSider } from '@components';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 
 export const MainPage: React.FC = () => {
@@ -13,10 +13,7 @@ export const MainPage: React.FC = () => {
             <Layout>
                 <MainSider />
                 <Layout>
-                    <Header>
-                        <span>Главная</span>
-                        <h1>Приветствуем тебя в CleverFit — приложении,<br/>которое поможет тебе добиться своей мечты!</h1>
-                    </Header>
+                    <MainHeader />
                     <Content>
                         Content
                     </Content>
