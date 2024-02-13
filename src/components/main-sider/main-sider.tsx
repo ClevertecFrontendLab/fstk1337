@@ -82,7 +82,12 @@ export const MainSider:FC<MainSiderProps> = ({ collapsedState }) => {
                     <Menu mode='inline' items={menuItems} className={style.siderMenu} />
                 </div>
             </div>
-            <button className={style.siderBtn} type='button' onClick={() => setCollapsed(!collapsed)}>
+            <button
+                className={style.siderBtn}
+                type='button'
+                onClick={() => setCollapsed(!collapsed)}
+                data-test-id={width < 640 ? 'sider-switch-mobile' : 'sider-switch'}
+            >
                 {collapsed ? <MenuUnfoldOutlined style={{ color: '#8c8c8c' }} /> : <MenuFoldOutlined style={{ color: '#8c8c8c' }} />}
             </button>
         </Sider>
