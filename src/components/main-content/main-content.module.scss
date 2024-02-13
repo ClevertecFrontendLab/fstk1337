@@ -1,0 +1,108 @@
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 24px 24px 41px;
+}
+
+.topCards {
+  max-width: 752px;
+}
+
+.mainCard {
+  border-radius: 2px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  background: #fff;
+  max-width: 752px;
+}
+
+.mainCardText {
+  font-size: 16px;
+  color: #061178;
+  line-height: 130%;
+}
+
+.mainCardStrongText {
+  font-weight: 500;
+  font-size: 20px;
+  color: #262626;
+  line-height: 130%;
+}
+
+.cardsRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.middleCards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.middleCards {
+  max-width: 752px;
+}
+
+.actionCards {
+  display: flex;
+  flex-direction: row;
+  row-gap: 8px;
+  column-gap: 16px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap!important;
+  }
+}
+
+.actionCards > div {
+  flex-grow: 1;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 240px;
+  }
+}
+
+.downCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  row-gap: 24px;
+  @media screen and (min-width: 768px) {
+    min-height: 283px;
+  }
+}
+
+.reviewsBtn {
+  order: 2;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: auto;
+    order: 1;
+  }
+  & button {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+      width: auto;
+    }
+  }
+}
+
+.downloadApp {
+  width: 100%;
+  order: 1;
+  @media screen and (min-width: 768px) {
+    width: auto;
+    order: 2;
+  }
+}
+
+.downCard {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+  @media screen and (min-width: 768px) {
+    max-width: 240px;
+  }
+}

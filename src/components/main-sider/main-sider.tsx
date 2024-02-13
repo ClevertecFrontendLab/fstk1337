@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, FC } from 'react';
 
 import  { Layout, Menu } from 'antd';
 import { ItemType } from 'antd/lib/menu/hooks/useItems';
@@ -8,12 +8,16 @@ import style from './main-sider.module.scss';
 import BigLogo from '@images/logo.svg';
 import SmallLogo from '@images/logo-collapsed.svg';
 import ExitIcon from '@icons/exit.svg';
+import { MainSiderProps } from './main-sider-props';
+import { useWindowWidth } from '@hooks';
 
 const { Sider } = Layout;
 
 
-export const MainSider = () => {
-    const [collapsed, setCollapsed] = useState(false);
+export const MainSider:FC<MainSiderProps> = ({ collapsedState }) => {
+    const [collapsed, setCollapsed] = collapsedState;
+    const width = useWindowWidth();
+
     const menuItemStyle:CSSProperties = {
         height: '42px',
         lineHeight: '42px',
@@ -64,8 +68,8 @@ export const MainSider = () => {
 
     return (
         <Sider
-            width={208}
-            collapsedWidth={64}
+            width={width < 640 ? 106 : 208}
+            collapsedWidth={width < 640 ? 0 : 64}
             trigger={null}
             collapsible
             collapsed={collapsed}
@@ -77,9 +81,6 @@ export const MainSider = () => {
                     </a>
                     <Menu mode='inline' items={menuItems} className={style.siderMenu} />
                 </div>
-                {/* <div className={style.siderFooter}>
-                    <Menu mode='inline' items={[bottomItem]} />
-                </div> */}
             </div>
             <button className={style.siderBtn} type='button' onClick={() => setCollapsed(!collapsed)}>
                 {collapsed ? <MenuUnfoldOutlined style={{ color: '#8c8c8c' }} /> : <MenuFoldOutlined style={{ color: '#8c8c8c' }} />}

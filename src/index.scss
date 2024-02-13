@@ -8,8 +8,8 @@
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -80,19 +80,23 @@ button {
 
 .ant-layout {
     background: none;
+    min-height: 100vh;
 }
 
 .main-container > .ant-layout {
-    background: linear-gradient(270.00deg, rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.8) 100%), url('./assets/images/main-back.png');
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fffdfd 100%), url('./assets/images/main-back.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .ant-layout-sider {
+    position: fixed;
+    z-index: 10;
     background-color: #fff;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
-    min-height: 100vh;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    height: 100vh;
 }
   
 .ant-layout-header {
@@ -109,4 +113,42 @@ button {
 
 h1.ant-typography {
     margin-bottom: 0;
+}
+
+.ant-card-head {
+    min-height: 45px;
+}
+
+.ant-card-head-title {
+    padding: 12px 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #262626;
+    text-align: center;
+    white-space: unset;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+    @media screen and (min-width: 992px) {
+        text-align: center;
+    }
+}
+
+.ant-card:has(.ant-card-head) .ant-card-body {
+    padding: 12px 0;
+    text-align: center;
+}
+
+.ant-card-meta-detail {
+    text-align: center;
+}
+
+.ant-card-meta-title {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #2F54EB;
 }

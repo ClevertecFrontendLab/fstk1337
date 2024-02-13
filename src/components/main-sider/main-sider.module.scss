@@ -15,7 +15,7 @@
   height: 66px;
   background-color: #fff;
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 .siderHeader {
@@ -41,7 +41,7 @@
 }
 
 .smallLogo {
-  padding: 21px 18px 18px 18px;
+  padding: 21px 18px 18px;
 }
 
 .siderFooter > ul > li > span {
